@@ -26,7 +26,7 @@ class LinkedList:
             self.first = item
             self.data.append(item)
             return
-        last = self.first
+        last: Node = self.first
         while True:
             if last.next is None:
                 self.data.append(item)
@@ -42,3 +42,4 @@ class LinkedList:
         # This method should print all elements in the list from the head to the end
         for item in self.data:
             print(item.data)
+            # print(item.data + ' -> ' + (item.next.data if item.next is not None else ''))
