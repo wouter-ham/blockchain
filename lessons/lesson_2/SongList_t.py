@@ -1,6 +1,4 @@
-
 from SongList import *
-
 
 linkedlist = SongList()
 print(linkedlist)
