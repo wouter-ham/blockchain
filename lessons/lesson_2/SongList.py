@@ -1,12 +1,12 @@
 class SongNode:
-    def __init__(self, song_title=None, next=None):
-        self.song_title = song_title
-        self.next = next
+    def __init__(self, song_title: str | None = None, next=None):
+        self.song_title: str = song_title
+        self.next: SongNode = next
 
 
 class SongList:
     def __init__(self):
-        self.head: SongNode = None
+        self.head: SongNode | None = None
 
     def printSongs(self) -> None:
         current: SongNode = self.head
