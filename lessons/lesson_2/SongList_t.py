@@ -1,7 +1,7 @@
 from SongList import *
 
 linkedlist = SongList()
-print(linkedlist)
+# print(linkedlist)
 
 # assign values to nodes
 linkedlist.head = SongNode("A Hard Day's Night")
@@ -13,8 +13,10 @@ linkedlist.head.next = second
 second.next = third
 third.next = None
 
-linkedlist.printSongs()
+# linkedlist.printSongs()
 
 linkedlist.AddNewSong("She Loves You")
 linkedlist.AddNewSong("Something")
-linkedlist.printSongs()
+# linkedlist.printSongs()
+
+linkedlist.printAll()
