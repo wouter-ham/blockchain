@@ -17,12 +17,10 @@ class Node:
 
 
 class LinkedList:
-    data = []
+    data: [Node] = []
+    first: Node = None
 
-    def __init__(self):
-        self.first = None
-
-    def append(self, item):
+    def append(self, item: Node) -> None:
         # This method should append an item to the end of the list
         if self.first is None:
             self.first = item
@@ -36,11 +34,11 @@ class LinkedList:
                 break
             last = last.next
 
-    def getLen(self):
+    def getLen(self) -> int:
         # This method should find the length of the list and return it
         return len(self.data)
 
-    def printAll(self):
+    def printAll(self) -> None:
         # This method should print all elements in the list from the head to the end
         for item in self.data:
             print(item.data)
