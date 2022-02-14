@@ -8,13 +8,13 @@ class SongList:
     def __init__(self):
         self.head: SongNode = None
 
-    def printSongs(self):
+    def printSongs(self) -> None:
         current: SongNode = self.head
         while current is not None:
             print(current.song_title)
             current = current.next
 
-    def AddNewSong(self, new_song_title: str):
+    def AddNewSong(self, new_song_title: str) -> None:
         self.getTail().next = SongNode(new_song_title)
 
     def getTail(self) -> SongNode:
