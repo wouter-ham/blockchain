@@ -1,7 +1,7 @@
 from Signature import *
 
 if __name__ == '__main__':
-    
+
     alex_prv, alex_pbc = generate_keys()
     mike_prv, mike_pbc = generate_keys()
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     # If Alex sign it:
     alex_signature = sign(alex_message, alex_prv)
-    
+
     verified = verify(alex_message, alex_signature, alex_pbc)
     if verified:
         print('Success: Valide signature is verified.')
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     # If Mike sign it:
     f_signature = sign(alex_message, mike_prv)
-    
+
     verified = verify(alex_message, f_signature, alex_pbc)
     if verified:
         print('Fail: Invalid signature is verified.')
