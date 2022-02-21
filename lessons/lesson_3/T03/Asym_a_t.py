@@ -10,7 +10,7 @@ if __name__ == '__main__':
     with open('T03/message_test.enc', 'rb') as file:
         content = file.read()
         for item in loaded_keys:
-            key_name, prv_key, pbc_key = item
+            key_name, prv_key, _ = item
             decrypted = decrypt(b'{content}', prv_key)
 
             if decrypted:
