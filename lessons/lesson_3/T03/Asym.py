@@ -30,7 +30,7 @@ def encrypt(message: bytes, key: RSAPrivateKey | RSAPublicKey) -> bytes | bool:
         return False
 
 
-def decrypt(ciphertext: bytes, key: RSAPrivateKey | RSAPublicKey) -> bytes | bool:
+def decrypt(ciphertext, key: RSAPrivateKey | RSAPublicKey) -> bytes | bool:
     try:
         plaintext = key.decrypt(
             ciphertext,

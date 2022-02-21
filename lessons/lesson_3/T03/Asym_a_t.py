@@ -11,7 +11,7 @@ if __name__ == '__main__':
         content = file.read()
         for item in loaded_keys:
             key_name, prv_key, _ = item
-            decrypted = decrypt(b'{content}', prv_key)
+            decrypted = decrypt(content, prv_key)
 
             if decrypted:
                 print('sender: ' + key_name)
